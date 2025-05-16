@@ -1,5 +1,7 @@
 import React from 'react';
-import banner from '../../../assets/banner.jpg'
+import man from '../../../assets/man.webp'
+import girl from '../../../assets/girl.jpg'
+
 import { CiCalendarDate } from 'react-icons/ci';
 import { FaRegComment } from 'react-icons/fa6';
 
@@ -7,7 +9,7 @@ const BannerContent = () => {
     return (
         <div className='flex flex-col gap-10'>
             <div className='relative flex gap-3 roounded-xl shadow '>
-                <img src={banner} alt="" className='w-60 h-44 rounded' />
+                <img src={man} alt="" className='w-60 h-44 rounded' />
 
                 {/* Gradient overlay */}
                 <div className=' rounded-2xl z-0'></div>
@@ -30,7 +32,7 @@ const BannerContent = () => {
                 </div>
             </div>
             <div className='relative flex gap-3 rounded-xl shadow '>
-                <img src={banner} alt="" className='w-60 h-44 rounded' />
+                <img src={girl} alt="" className='w-60 h-44 rounded' />
 
                 {/* Gradient overlay */}
                 <div className=' rounded-2xl z-0'></div>
