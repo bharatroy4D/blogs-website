@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "img": "https://amateurphotographer.com/wp-content/uploads/sites/7/2022/05/credit-John-Lamb-GettyImages-497811221-1000.jpg",
+    "description": "Top 5 fitness routines used by elite athletes to stay in ",
+    "date": "2025-05-10",
+    "category": "Sport"
+  },
+  {
+    "id": 2,
+    "img": "https://blog.swiggy.com/wp-content/uploads/2024/02/Masala-Dosa-1024x538.jpg",
+    "description": "10 quick and healthy breakfast recipes you can make in 15 .",
+    "date": "2025-05-08",
+    "category": "Food"
+  },
+  {
+    "id": 3,
+    "img": "https://www.allalliedhealthschools.com/wp-content/uploads/2021/07/public-health-worker-with-young-patient-1200x628-1.jpg",
+    "description": "How to build a strong immune system naturally through diet .",
+    "date": "2025-05-06",
+    "category": "Health"
+  },
+  {
+    "id": 4,
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFHESJXLE8Kxr3pI6kE9rH4Gfui5qRf92ZsQ&s",
+    "description": "5 essential strategies to grow your startup in a competitive.",
+    "date": "2025-05-03",
+    "category": "Business"
+  },
+  {
+    "id": 5,
+    "img": "https://example.com/images/sport2.jpg",
+    "description": "The evolution of football tactics: What changed in the last decade?",
+    "date": "2025-05-02",
+    "category": "Sport"
+  },
+  {
+    "id": 6,
+    "img": "https://example.com/images/food2.jpg",
+    "description": "The art of pairing wine with meals: A guide for beginners.",
+    "date": "2025-05-04",
+    "category": "Food"
+  },
+  {
+    "id": 7,
+    "img": "https://example.com/images/health2.jpg",
+    "description": "Mental wellness tips for professionals working long hours.",
+    "date": "2025-05-01",
+    "category": "Health"
+  },
+  {
+    "id": 8,
+    "img": "https://example.com/images/business2.jpg",
+    "description": "How AI is changing the future of finance and business analytics.",
+    "date": "2025-04-29",
+    "category": "Business"
+  }
+]
