@@ -15,13 +15,13 @@ const Navbar = () => {
                     <img src={logo} alt="" />
                     {/* navbar route */}
                     <div className='flex  gap-4 items-center'>
-                        <NavLink to="home" className="flex items-center">Home <MdOutlineKeyboardArrowDown className='text-xl' />
+                        <NavLink to="/" className="flex items-center">Home <MdOutlineKeyboardArrowDown className='text-xl' />
                         </NavLink>
-                        <NavLink to="postFeatures" className="flex items-center">Post Features  <MdOutlineKeyboardArrowDown className='text-xl' /></NavLink>
-                        <NavLink to="teachology" className="flex items-center">Teachology  <MdOutlineKeyboardArrowDown className='text-xl' /></NavLink>
-                        <NavLink to="lifeStyle" className="flex items-center">Lifestyle  <MdOutlineKeyboardArrowDown className='text-xl' /></NavLink>
-                        <NavLink to="pages" className="flex items-center">Pages  <MdOutlineKeyboardArrowDown className='text-xl' /></NavLink>
-                        <NavLink to="bookmark" className="flex items-center">Bookmark  <MdOutlineKeyboardArrowDown className='text-xl' /></NavLink>
+                        <NavLink to="/postFeatures" className="flex items-center">Post Features  <MdOutlineKeyboardArrowDown className='text-xl' /></NavLink>
+                        <NavLink to="/teachology" className="flex items-center">Teachology  <MdOutlineKeyboardArrowDown className='text-xl' /></NavLink>
+                        <NavLink to="/lifeStyle" className="flex items-center">Lifestyle  <MdOutlineKeyboardArrowDown className='text-xl' /></NavLink>
+                        <NavLink to="/pages" className="flex items-center">Pages  <MdOutlineKeyboardArrowDown className='text-xl' /></NavLink>
+                        <NavLink to="/bookmark" className="flex items-center">Bookmark  <MdOutlineKeyboardArrowDown className='text-xl' /></NavLink>
                     </div>
                     {/* navbar othe icon */}
                     <div className='flex gap-5 items-center text-2xl'>
