@@ -17,11 +17,11 @@ const TopBar = () => {
                     <p className='flex gap-1 items-center text-sm font-semibold'><MdOutlineDateRange className='text-2xl' />
                         Friday, 16 May 2025</p>
                     <div className='flex gap-2 items-center border-l pl-3 border-gray-300'>
-                        <GrFacebookOption className='text-xl' />
-                        <FaXTwitter className='text-xl' />
-                        <FaInstagram className='text-xl'/>
-                        <GrYoutube className='text-xl' />
-                        <GrLinkedinOption className='text-xl' />
+                        <GrFacebookOption className='text-' />
+                        <FaXTwitter className='text-' />
+                        <FaInstagram className='text-'/>
+                        <GrYoutube className='text-' />
+                        <GrLinkedinOption className='text-' />
 
                     </div>
                 </div>
