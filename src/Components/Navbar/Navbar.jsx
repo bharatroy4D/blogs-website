@@ -8,7 +8,7 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 
 const Navbar = () => {
     return (
-        <div className='bg-base-200'>
+        <div className='bg-blue-50'>
             <div className='max-w-7xl px-5 lg:px-10 mx-auto'>
                 <div className='flex items-center text-lg font-semibold justify-between py-5'>
                     {/*navbar logo */}

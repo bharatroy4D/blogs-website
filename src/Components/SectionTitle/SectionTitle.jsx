@@ -1,0 +1,15 @@
+import React from 'react';
+import { LuArrowRight } from 'react-icons/lu';
+
+const SectionTitle = ({ title, view }) => {
+    return (
+        <div className='flex items-center justify-between border-b-2 border-gray-300 pb-5'>
+            <h1 className='text-3xl font-bold'>{title}</h1>
+            <p className='flex items-center text-xl '>{view} 
+                <LuArrowRight className='text-4xl bg-gray-200 p-1.5 rounded-full ml-3'/>
+            </p>
+        </div>
+    );
+};
+
+export default SectionTitle;

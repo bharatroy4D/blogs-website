@@ -10,12 +10,12 @@ const Top = () => {
                     <div className='flex items-center gap-3 '>
                         <button className='btn  text-xs text-gray-600 font-bold uppercase '><ImPower />
                             top news</button>
-                        <p className=' font-semibold hover:underline'><link rel="stylesheet" href="#" />Winter Dressing Tips When It's Really Cold Out</p>
+                        <p className='text-sm font-semibold hover:underline'><link rel="stylesheet" href="#" />Winter Dressing Tips When It's Really Cold Out</p>
                     </div>
                     <div className='flex items-center gap-3'>
                         <p className='text-sm font-bold'>Quick Links:</p>
-                        <p className='font-bold text-gray-500 border border-gray-500 hover:bg-gray-500 hover:text-white rounded py-2 px-3'>Workout</p>
-                        <p className='font-bold text-gray-500 border border-gray-500  hover:bg-gray-500 hover:text-white rounded py-2 px-3'>Wellness</p>
+                        <p className='text-sm font-bold text-gray-500 border border-gray-500 hover:bg-gray-500 hover:text-white rounded py-2 px-3'>Workout</p>
+                        <p className=' text-sm font-bold text-gray-500 border border-gray-500  hover:bg-gray-500 hover:text-white rounded py-2 px-3'>Wellness</p>
                     </div>
                 </div>
             </div>

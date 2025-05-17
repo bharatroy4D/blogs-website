@@ -3,6 +3,8 @@ import Top from './Top/Top';
 import Banner from './Banner/Banner';
 import BannerContent from './BannerContent/BannerContent';
 import Blogs from './Blogs/Blogs';
+import Preview from './Preview/Preview';
+import PostBlog from './PostBlog/PostBlog';
 
 const Home = () => {
     return (
@@ -14,7 +16,9 @@ const Home = () => {
                     <BannerContent></BannerContent>
                 </div>
                 <Blogs></Blogs>
+                <Preview></Preview>
             </div>
+            <PostBlog></PostBlog>
         </div>
     );
 };

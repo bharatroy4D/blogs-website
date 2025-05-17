@@ -19,9 +19,8 @@ const TopBar = () => {
                     <div className='flex gap-3 items-center border-l pl-3 border-gray-300'>
                         <GrFacebookOption className='text-' />
                         <FaXTwitter className='text-' />
-                        <FaInstagram className='text-'/>
                         <GrYoutube className='text-' />
-                        <GrLinkedinOption className='text-' />
+                        <FaInstagram className='text-'/>
 
                     </div>
                 </div>
