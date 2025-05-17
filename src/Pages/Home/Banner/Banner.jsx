@@ -33,11 +33,6 @@ const Banner = () => {
                     </div>
                 </div>
             </div>
-
-            <div className='w-[50%] border'>
-
-            </div>
-
         </div>
     );
 };

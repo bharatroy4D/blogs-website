@@ -31,11 +31,11 @@ const PostBlog = () => {
 
                         return (
                             <div key={post.id}>
-                                <div className='relative gap-3 rounded-xl shadow bg-white'>
+                                <div className='relative gap-3 rounded shadow bg-white'>
                                     <img
                                         src={post.img}
                                         alt={post.category}
-                                        className='w-full h-54 rounded-t-xl object-cover'
+                                        className='w-full h-54 rounded-t object-cover'
                                     />
 
                                     <div className='flex flex-col gap-3 p-5'>
