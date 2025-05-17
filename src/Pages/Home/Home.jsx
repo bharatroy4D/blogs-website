@@ -8,11 +8,13 @@ const Home = () => {
     return (
         <div>
             <Top></Top>
-            <div className='flex items-center w-full gap-6 max-w-7xl px-5 lg:px-10 mx-auto'>
-            <Banner></Banner>
-            <BannerContent></BannerContent>
+            <div className='bg-base-100'>
+                <div className='flex items-center w-full gap-6 max-w-7xl px-5 lg:px-10 mx-auto'>
+                    <Banner></Banner>
+                    <BannerContent></BannerContent>
+                </div>
+                <Blogs></Blogs>
             </div>
-            <Blogs></Blogs>
         </div>
     );
 };

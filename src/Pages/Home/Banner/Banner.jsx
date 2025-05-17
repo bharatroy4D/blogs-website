@@ -7,7 +7,7 @@ const Banner = () => {
     return (
         <div>
             <div className='w-[600PX] relative'>
-                <img src={banner} alt="" className='w-full rounded-xl' />
+                <img src={banner} alt="" className='w-full rounded ' />
 
                 {/* Gradient overlay */}
                 <div className='absolute inset-0 bg-gradient-to-t from-black/25 to-transparent rounded-2xl z-0'></div>
@@ -20,7 +20,7 @@ const Banner = () => {
                     <div className='flex items-center gap-7'>
                         <div className='flex gap-2 items-center'>
                             <img src="https://secure.gravatar.com/avatar/e395de6d983ff5fd552a36947ee8d60cb937c8078624065edbc305d25a3287f7?s=25&d=mm&r=g" alt="" className='rounded-full' />
-                            <h2 className='text-lg font-bold'>Bin McKiney</h2>
+                            <h2 className='text-sm font-bold'>Bin McKiney</h2>
                         </div>
                         <div className='flex items-center gap-2'>
                             <CiCalendarDate className='text-xl' />

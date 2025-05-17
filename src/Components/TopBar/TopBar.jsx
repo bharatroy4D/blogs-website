@@ -16,7 +16,7 @@ const TopBar = () => {
                 <div className='flex gap-2 items-center'>
                     <p className='flex gap-1 items-center text-sm font-semibold'><MdOutlineDateRange className='text-2xl' />
                         Friday, 16 May 2025</p>
-                    <div className='flex gap-2 items-center border-l pl-3 border-gray-300'>
+                    <div className='flex gap-3 items-center border-l pl-3 border-gray-300'>
                         <GrFacebookOption className='text-' />
                         <FaXTwitter className='text-' />
                         <FaInstagram className='text-'/>
