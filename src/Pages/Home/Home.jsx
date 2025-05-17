@@ -5,6 +5,7 @@ import BannerContent from './BannerContent/BannerContent';
 import Blogs from './Blogs/Blogs';
 import Preview from './Preview/Preview';
 import PostBlog from './PostBlog/PostBlog';
+import MostBlogs from './MostBlogs/MostBlogs';
 
 const Home = () => {
     return (
@@ -19,6 +20,7 @@ const Home = () => {
                 <Preview></Preview>
             </div>
             <PostBlog></PostBlog>
+            <MostBlogs></MostBlogs>
         </div>
     );
 };
