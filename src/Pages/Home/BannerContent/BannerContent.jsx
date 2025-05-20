@@ -1,9 +1,7 @@
 import React from 'react';
 import man from '../../../assets/man.webp'
 import girl from '../../../assets/girl.jpg'
-
 import { CiCalendarDate } from 'react-icons/ci';
-import { FaRegComment } from 'react-icons/fa6';
 
 const BannerContent = () => {
     return (

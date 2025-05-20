@@ -7,7 +7,7 @@ const MostBlogs = () => {
     return (
         <div className='bg-black'>
             <div className='max-w-7xl px-5 py-7 lg:px-10 mx-auto'>
-                <SectionTitle title={'Most Read'} view={'View All'} />
+                <SectionTitle title={'Most Read'} view={'View All'} color='text-white'/>
                 <div className='flex items-center gap-5'>
                     {/* left side */}
                     <div className='flex flex-col gap-5 py-7 w-1/4'>

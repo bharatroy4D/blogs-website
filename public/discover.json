@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "img": "https://byteflows.net/wp/forcast-main/wp-content/uploads/2024/03/busnes.webp",
+    "name": "Business",
+    "articles": "14 articles"
+  },
+  {
+    "id": 2,
+    "img": "https://byteflows.net/wp/forcast-main/wp-content/uploads/2024/07/fodi.webp",
+    "name": "Food",
+    "articles": "9 articles"
+  },
+  {
+    "id": 3,
+    "img": "https://byteflows.net/wp/forcast-main/wp-content/uploads/2024/05/science-2.webp",
+    "name": "Science",
+    "articles": "13 articles"
+  },
+  {
+    "id": 4,
+    "img": "https://byteflows.net/wp/forcast-main/wp-content/uploads/2024/09/trvl.webp",
+    "name": "Travel",
+    "articles": "8 articles"
+  },
+  {
+    "id": 5,
+    "img": "http://byteflows.net/wp/forcast-main/wp-content/uploads/2024/09/techno.webp",
+    "name": "Technology",
+    "articles": "15 articles"
+  },
+  {
+    "id": 6,
+    "img": "https://byteflows.net/wp/forcast-main/wp-content/uploads/2024/09/sp-new.webp",
+    "name": "Sports",
+    "articles": "10 articles"
+  },
+  {
+    "id": 7,
+    "img": "https://byteflows.net/wp/forcast-main/wp-content/uploads/2024/05/tech-7.webp",
+    "name": "Lifestyle",
+    "articles": "7 articles"
+  },
+  {
+    "id": 8,
+    "img": "https://byteflows.net/wp/forcast-main/wp-content/uploads/2024/05/science-2.webp",
+    "name": "Health",
+    "articles": "11 articles"
+  }
+]

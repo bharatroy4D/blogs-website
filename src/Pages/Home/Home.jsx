@@ -6,6 +6,8 @@ import Blogs from './Blogs/Blogs';
 import Preview from './Preview/Preview';
 import PostBlog from './PostBlog/PostBlog';
 import MostBlogs from './MostBlogs/MostBlogs';
+import Discover from './Discover/Discover';
+import FromBlog from './FromBlog/FromBlog';
 
 const Home = () => {
     return (
@@ -21,6 +23,8 @@ const Home = () => {
             </div>
             <PostBlog></PostBlog>
             <MostBlogs></MostBlogs>
+            <Discover></Discover>
+            <FromBlog></FromBlog>
         </div>
     );
 };

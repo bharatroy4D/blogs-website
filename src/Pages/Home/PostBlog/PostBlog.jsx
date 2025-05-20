@@ -19,7 +19,7 @@ const PostBlog = () => {
 
     return (
         <div className='bg-blue-50'>
-            <div className='max-w-7xl px-5 py-8 my-6 lg:px-10 mx-auto'>
+            <div className='max-w-7xl px-5 py-8 mt-6 lg:px-10 mx-auto'>
                 <SectionTitle title={'Most Post Discussed'} view={'View All'} />
 
                 {loading && <p>Loading...</p>}
@@ -30,12 +30,12 @@ const PostBlog = () => {
                         const bgClass = categoryColors[post.category] || categoryColors.Default;
 
                         return (
-                            <div key={post.id}>
-                                <div className='relative gap-3 rounded shadow bg-white'>
+                            <div key={post.id} className=''>
+                                <div className=' relative gap-3 rounded shadow bg-white overflow-hidden'>
                                     <img
                                         src={post.img}
                                         alt={post.category}
-                                        className='w-full h-54 rounded-t object-cover'
+                                        className='w-full h-54 rounded-t object-cover transform hover:scale-105 transition duration-1000'
                                     />
 
                                     <div className='flex flex-col gap-3 p-5'>
