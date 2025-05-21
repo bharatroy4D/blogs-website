@@ -23,7 +23,7 @@ const BlogsViewLeft = () => {
         <h3 className='flex items-center text-gray-600 font-semibold mb-7 '>
           Home
           <MdOutlineKeyboardArrowRight className='relative top-0.5 text-xl align-middle ml-5' />
-          <span className='ml-5 '>{blog.title || 'Blog Detail'}</span>
+          <span className='ml-5 text-xl text-black '>{blog.description || 'Blog Detail'}</span>
         </h3>
 
         <img src={blog.img} alt={blog.category} className='rounded-2xl ' />

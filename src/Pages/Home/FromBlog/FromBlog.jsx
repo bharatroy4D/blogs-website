@@ -2,6 +2,7 @@ import React from 'react';
 import { CiCalendarDate } from 'react-icons/ci';
 import useFetch from '../../../Components/CustomHooks/useFetch';
 import SectionTitle from '../../../Components/SectionTitle/SectionTitle';
+import { Link } from 'react-router-dom';
 
 const FromBlog = () => {
     const { data, loading, error } = useFetch({ url: 'blogs.json' });
@@ -30,48 +31,53 @@ const FromBlog = () => {
 
                 {/* Blog Cards */}
                 {!loading && !error && data && data.map(blog => (
-                    <div key={blog.id} className='bg-white  p-4 flex gap-4  transition'>
-                        {/* Blog Image */}
-                        <img
-                            src={blog.img}
-                            alt="Blog Thumbnail"
-                            className='w-60 h-44 object-cover rounded transform hover:translate-x-1 duration-1000'
-                        />
+                    <Link key={blog.id} to={`/blogsView/${blog.id}`}>
 
-                        {/* Blog Content */}
-                        <div className='flex flex-col justify-between'>
-                            {/* Category Button with Dynamic Color */}
-                            <button className={`text-sm text-white font-bold w-fit py-1 px-3 rounded 
+                        <div key={blog.id} className='bg-white  p-4 flex gap-4  transition'>
+                            {/* Blog Image */}
+                            <img
+                                src={blog.img}
+                                alt="Blog Thumbnail"
+                                className='w-60 h-44 object-cover rounded transform hover:translate-x-1 duration-1000'
+                            />
+
+                            {/* Blog Content */}
+                            <div className='flex flex-col justify-between'>
+                                {/* Category Button with Dynamic Color */}
+                                <button className={`text-sm text-white font-bold w-fit py-1 px-3 rounded 
                                 ${colorMap[blog.category?.toLowerCase()] || colorMap.default}`}>
-                                {blog.category}
-                            </button>
+                                    {blog.category}
+                                </button>
 
-                            {/* Blog Title */}
-                            <h1 className='text-xl font-bold mt-2'>{blog.description}</h1>
+                                {/* Blog Title */}
+                                <h1 className='text-xl font-bold mt-2'>{blog.description}</h1>
 
-                            {/* Author & Date */}
-                            <div className='flex items-center justify-between mt-4'>
-                                {/* Author */}
-                                <div className='flex items-center gap-2'>
-                                    <img
-                                        src="https://secure.gravatar.com/avatar/e395de6d983ff5fd552a36947ee8d60cb937c8078624065edbc305d25a3287f7?s=25&d=mm&r=g"
-                                        alt="Author"
-                                        className='rounded-full w-6 h-6 hover:scale-110 transition-transform duration-300'
-                                    />
-                                    <span className='text-sm font-semibold'>Bin McKiney</span>
-                                </div>
+                                {/* Author & Date */}
+                                <div className='flex items-center justify-between mt-4'>
+                                    {/* Author */}
+                                    <div className='flex items-center gap-2'>
+                                        <img
+                                            src="https://secure.gravatar.com/avatar/e395de6d983ff5fd552a36947ee8d60cb937c8078624065edbc305d25a3287f7?s=25&d=mm&r=g"
+                                            alt="Author"
+                                            className='rounded-full w-6 h-6 hover:scale-110 transition-transform duration-300'
+                                        />
+                                        <span className='text-sm font-semibold'>Bin McKiney</span>
+                                    </div>
 
-                                {/* Date */}
-                                <div className='flex items-center gap-2'>
-                                    <CiCalendarDate className='text-xl' />
-                                    <span className='text-sm font-semibold'>{blog.date}</span>
+                                    {/* Date */}
+                                    <div className='flex items-center gap-2'>
+                                        <CiCalendarDate className='text-xl' />
+                                        <span className='text-sm font-semibold'>{blog.date}</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </Link>
+
+
                 ))}
             </div>
-        </div>
+        </div >
     );
 };
 
