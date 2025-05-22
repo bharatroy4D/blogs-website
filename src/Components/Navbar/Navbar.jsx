@@ -1,35 +1,60 @@
-import React from 'react';
-import logo from '../../assets/logo-ml.svg'
+import React, { useState } from 'react';
+import logo from '../../assets/logo-ml.svg';
 import { NavLink } from 'react-router-dom';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { CiBookmark } from 'react-icons/ci';
-import { IoMoonOutline, IoSearchOutline } from 'react-icons/io5';
+import { IoMoonOutline, IoSearchOutline, IoClose } from 'react-icons/io5';
 import { GiHamburgerMenu } from 'react-icons/gi';
 
 const Navbar = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
+
     return (
-        <div className='bg-blue-50'>
+        <div className='bg-blue-50 relative z-50'>
             <div className='max-w-7xl px-5 lg:px-10 mx-auto'>
-                <div className='flex items-center text-lg font-semibold justify-between py-5'>
-                    {/*navbar logo */}
-                    <img src={logo} alt="" />
-                    {/* navbar route */}
-                    <div className='flex  gap-4 items-center'>
-                        <NavLink to="/" className="flex items-center">Home <MdOutlineKeyboardArrowDown className='text-xl' />
-                        </NavLink>
-                        <NavLink to="/postFeatures" className="flex items-center">Post Features  <MdOutlineKeyboardArrowDown className='text-sm' /></NavLink>
-                        <NavLink to="/teachology" className="flex items-center">Teachology  <MdOutlineKeyboardArrowDown className='text-sm' /></NavLink>
-                        <NavLink to="/lifeStyle" className="flex items-center">Lifestyle  <MdOutlineKeyboardArrowDown className='text-sm' /></NavLink>
-                        <NavLink to="/pages" className="flex items-center">Pages  <MdOutlineKeyboardArrowDown className='text-sm' /></NavLink>
-                        <NavLink to="/bookmark" className="flex items-center">Bookmark  <MdOutlineKeyboardArrowDown className='text-sm' /></NavLink>
+                <div className='flex items-center justify-between py-5'>
+
+                    {/* Logo */}
+                    <img src={logo} alt="Logo" className='w-32 md:w-40' />
+
+                    {/* Nav Links for large device */}
+                    <div className='hidden lg:flex gap-6 items-center text-base font-semibold'>
+                        <NavLink to="/" className="flex items-center gap-1">Home <MdOutlineKeyboardArrowDown /></NavLink>
+                        <NavLink to="/postFeatures" className="flex items-center gap-1">Post Features <MdOutlineKeyboardArrowDown className='text-sm' /></NavLink>
+                        <NavLink to="/teachology" className="flex items-center gap-1">Teachology <MdOutlineKeyboardArrowDown className='text-sm' /></NavLink>
+                        <NavLink to="/lifeStyle" className="flex items-center gap-1">Lifestyle <MdOutlineKeyboardArrowDown className='text-sm' /></NavLink>
+                        <NavLink to="/pages" className="flex items-center gap-1">Pages <MdOutlineKeyboardArrowDown className='text-sm' /></NavLink>
+                        <NavLink to="/bookmark" className="flex items-center gap-1">Bookmark <MdOutlineKeyboardArrowDown className='text-sm' /></NavLink>
                     </div>
-                    {/* navbar othe icon */}
-                    <div className='flex gap-5 items-center text-2xl'>
-                        <CiBookmark />
-                        <IoMoonOutline />
-                        <IoSearchOutline />
-                        <GiHamburgerMenu />
+
+                    {/* Icons + Hamburger */}
+                    <div className='flex items-center gap-4 text-2xl'>
+                        <CiBookmark className='cursor-pointer hidden lg:block' />
+                        <IoMoonOutline className='cursor-pointer hidden lg:block' />
+                        <IoSearchOutline className='cursor-pointer hidden lg:block' />
+                        <button
+                            onClick={() => setMenuOpen(!menuOpen)}
+                            className='lg:hidden text-3xl focus:outline-none'
+                        >
+                            {menuOpen ? <IoClose /> : <GiHamburgerMenu />}
+                        </button>
+                        <GiHamburgerMenu className='hidden lg:block'/>
                     </div>
+                </div>
+            </div>
+
+            {/* Mobile Menu with Slide-In Effect */}
+            <div className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-40 transform transition-transform duration-300 ease-in-out ${menuOpen ? 'translate-x-0' : 'translate-x-full'} lg:hidden`}>
+                <div className='flex flex-col gap-4 p-6 text-base font-semibold text-gray-700'>
+                    <button onClick={() => setMenuOpen(false)} className='self-end text-2xl'>
+                        <IoClose />
+                    </button>
+                    <NavLink to="/" className="flex items-center gap-1">Home <MdOutlineKeyboardArrowDown /></NavLink>
+                    <NavLink to="/postFeatures" className="flex items-center gap-1">Post Features <MdOutlineKeyboardArrowDown className='text-sm' /></NavLink>
+                    <NavLink to="/teachology" className="flex items-center gap-1">Teachology <MdOutlineKeyboardArrowDown className='text-sm' /></NavLink>
+                    <NavLink to="/lifeStyle" className="flex items-center gap-1">Lifestyle <MdOutlineKeyboardArrowDown className='text-sm' /></NavLink>
+                    <NavLink to="/pages" className="flex items-center gap-1">Pages <MdOutlineKeyboardArrowDown className='text-sm' /></NavLink>
+                    <NavLink to="/bookmark" className="flex items-center gap-1">Bookmark <MdOutlineKeyboardArrowDown className='text-sm' /></NavLink>
                 </div>
             </div>
         </div>

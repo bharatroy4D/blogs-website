@@ -5,7 +5,7 @@ import { ImPower } from 'react-icons/im';
 const Top = () => {
     return (
         <div>
-            <div className='max-w-7xl px-5 py-5 lg:px-10 mx-auto'>
+            <div className='max-w-7xl px-5 py-5 lg:px-10 mx-auto hidden lg:block'>
                 <div className='flex items-center justify-between'>
                     <div className='flex items-center gap-3 '>
                         <button className='btn  text-xs text-gray-600 font-bold uppercase '><ImPower />

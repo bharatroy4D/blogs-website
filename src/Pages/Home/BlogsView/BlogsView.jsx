@@ -4,7 +4,7 @@ import BlogsViewRight from './BlogsViewRight';
 
 const BlogsView = () => {
     return (
-        <div className='flex gap-5 max-w-7xl px-5 pt-5 pb-8 lg:px-10'>
+        <div className='flex gap-5 max-w-7xl px-5 pt-5 pb-8 lg:px-10 mx-auto'>
             <BlogsViewLeft/>
             <BlogsViewRight/>
         </div>

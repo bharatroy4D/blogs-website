@@ -19,42 +19,35 @@ const FromBlog = () => {
 
     return (
         <div className='max-w-7xl px-5 pt-10 lg:px-10 mx-auto'>
-            {/* Section Title */}
             <SectionTitle title={'From The Blog'} view={'View All'} />
 
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 py-12'>
-                {/* Loading State */}
                 {loading && <p className='text-center text-lg font-medium'>Loading...</p>}
-
-                {/* Error State */}
                 {error && <p className='text-center text-red-500'>Error: {error}</p>}
 
-                {/* Blog Cards */}
-                {!loading && !error && data && data.map(blog => (
+                {!loading && !error && data?.map(blog => (
                     <Link key={blog.id} to={`/blogsView/${blog.id}`}>
-
-                        <div key={blog.id} className='bg-white  p-4 flex gap-4  transition'>
+                        <div className='bg-white p-4 flex flex-col md:flex-row gap-4 transition rounded-lg shadow-sm hover:shadow-md'>
                             {/* Blog Image */}
                             <img
                                 src={blog.img}
                                 alt="Blog Thumbnail"
-                                className='w-60 h-44 object-cover rounded transform hover:translate-x-1 duration-1000'
+                                className='w-full md:w-60 h-48 object-cover rounded-lg transform hover:scale-[1.02] duration-500'
                             />
 
                             {/* Blog Content */}
-                            <div className='flex flex-col justify-between'>
-                                {/* Category Button with Dynamic Color */}
+                            <div className='flex flex-col justify-between w-full'>
+                                {/* Category Badge */}
                                 <button className={`text-sm text-white font-bold w-fit py-1 px-3 rounded 
-                                ${colorMap[blog.category?.toLowerCase()] || colorMap.default}`}>
+                                    ${colorMap[blog.category?.toLowerCase()] || colorMap.default}`}>
                                     {blog.category}
                                 </button>
 
-                                {/* Blog Title */}
-                                <h1 className='text-xl font-bold mt-2'>{blog.description}</h1>
+                                {/* Title */}
+                                <h1 className='text-lg md:text-xl font-bold mt-2'>{blog.description}</h1>
 
                                 {/* Author & Date */}
-                                <div className='flex items-center justify-between mt-4'>
-                                    {/* Author */}
+                                <div className='flex flex-col sm:flex-row sm:justify-between sm:items-center mt-4 gap-2'>
                                     <div className='flex items-center gap-2'>
                                         <img
                                             src="https://secure.gravatar.com/avatar/e395de6d983ff5fd552a36947ee8d60cb937c8078624065edbc305d25a3287f7?s=25&d=mm&r=g"
@@ -63,8 +56,6 @@ const FromBlog = () => {
                                         />
                                         <span className='text-sm font-semibold'>Bin McKiney</span>
                                     </div>
-
-                                    {/* Date */}
                                     <div className='flex items-center gap-2'>
                                         <CiCalendarDate className='text-xl' />
                                         <span className='text-sm font-semibold'>{blog.date}</span>
@@ -73,11 +64,9 @@ const FromBlog = () => {
                             </div>
                         </div>
                     </Link>
-
-
                 ))}
             </div>
-        </div >
+        </div>
     );
 };
 

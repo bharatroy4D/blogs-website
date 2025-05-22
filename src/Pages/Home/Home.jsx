@@ -14,7 +14,7 @@ const Home = () => {
         <div>
             <Top></Top>
             <div className='bg-base-100'>
-                <div className='flex items-center w-full gap-6 max-w-7xl px-5 lg:px-10 mx-auto'>
+                <div className='flex flex-col lg:flex-row items-center w-full gap-6 max-w-7xl px-5 lg:px-10 mx-auto'>
                     <Banner></Banner>
                     <BannerContent></BannerContent>
                 </div>
