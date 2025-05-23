@@ -5,7 +5,7 @@ import { CiCalendarDate } from 'react-icons/ci';
 
 const BannerContent = () => {
     return (
-        <div className='flex flex-col gap-10 py-6'>
+        <div className='flex flex-col gap-12 py-5 '>
             {/* Content Section 1 */}
             <div className='relative flex flex-col md:flex-row gap-4 rounded-xl shadow p-2'>
                 <img

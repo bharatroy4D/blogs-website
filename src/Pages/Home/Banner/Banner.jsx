@@ -6,7 +6,7 @@ import { FaRegComment } from 'react-icons/fa6';
 const Banner = () => {
     return (
         <div className=''>
-            <div className='w-full max-w-4xl mx-auto relative rounded-2xl overflow-hidden'>
+            <div className='w-full max-w-4xl mx-auto relative rounded-2xl mt-7 lg:mt-0 overflow-hidden'>
                 {/* Banner Image */}
                 <img src={banner} alt="Banner" className='w-full h-auto object-cover' />
 
@@ -25,7 +25,7 @@ const Banner = () => {
                         To mark the first UK show of artist Herni Brande, developers ThemesCamp and German Studio
                     </p>
 
-                    <div className='flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-7 text-sm sm:text-base'>
+                    <div className='flex sm:flex-row sm:items-center gap-3 sm:gap-7 text-sm sm:text-base'>
                         <div className='flex gap-2 items-center'>
                             <img
                                 src="https://secure.gravatar.com/avatar/e395de6d983ff5fd552a36947ee8d60cb937c8078624065edbc305d25a3287f7?s=25&d=mm&r=g"
@@ -38,7 +38,7 @@ const Banner = () => {
                             <CiCalendarDate className='text-lg' />
                             <span className='font-semibold'>Jul 11, 2025</span>
                         </div>
-                        <div className='flex items-center gap-2'>
+                        <div className='hidden lg:flex items-center gap-2'>
                             <FaRegComment className='text-lg' />
                             <span className='font-semibold'>0 comments</span>
                         </div>
