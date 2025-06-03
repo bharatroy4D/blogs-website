@@ -57,7 +57,7 @@ const PostBlog = () => {
 
                     {/* Mobile: Short Description */}
                     <h1 className='text-base font-semibold line-clamp-2 block lg:hidden'>
-                      {post.description.split(' ').slice(0, 3).join(' ')}...
+                      {post.description.split(' ').slice(0, 5).join(' ')}...
                     </h1>
 
                     {/* Large screen: Full Description */}

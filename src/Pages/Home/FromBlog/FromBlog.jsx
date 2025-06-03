@@ -41,7 +41,7 @@ const FromBlog = () => {
                 </div>
 
                 {/* Text Section */}
-                <div className="flex p-4 flex-col justify-center w-full relative">
+                <div className="flex px-4  pb-4 flex-col justify-center w-full relative">
                   {/* Category shown only in text section on lg screens */}
                   <div className="hidden lg:block">
                     <button
