@@ -47,7 +47,7 @@ const PostBlog = () => {
                     </button>
                   </div>
 
-                  <div className='flex flex-col gap-3 p-5'>
+                  <div className='flex flex-col gap-3 p-3 lg:p-5'>
                     {/* Category badge for large devices */}
                     <button
                       className={`text-sm text-white font-bold w-fit py-1 px-3 rounded hidden lg:block ${bgClass}`}
@@ -57,7 +57,7 @@ const PostBlog = () => {
 
                     {/* Mobile: Short Description */}
                     <h1 className='text-base font-semibold line-clamp-2 block lg:hidden'>
-                      {post.description.split(' ').slice(0, 4).join(' ')}...
+                      {post.description.split(' ').slice(0, 3).join(' ')}...
                     </h1>
 
                     {/* Large screen: Full Description */}

@@ -29,7 +29,7 @@ const FromBlog = () => {
           !error &&
           data?.slice(0, 10).map((blog) => (
             <Link key={blog.id} to={`/blogsView/${blog.id}`}>
-              <div className="bg-white p-4 flex flex-col lg:flex-row gap-4 transition rounded-lg shadow-sm hover:shadow-md">
+              <div className="bg-white  flex flex-col lg:flex-row gap-4 transition rounded-lg shadow-sm hover:shadow-md">
                 
                 {/* Image Section */}
                 <div className="lg:w-96">
@@ -41,7 +41,7 @@ const FromBlog = () => {
                 </div>
 
                 {/* Text Section */}
-                <div className="flex flex-col justify-center w-full relative">
+                <div className="flex p-4 flex-col justify-center w-full relative">
                   {/* Category shown only in text section on lg screens */}
                   <div className="hidden lg:block">
                     <button

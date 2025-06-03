@@ -44,7 +44,7 @@ const Blogs = () => {
                   <CiCalendarDate className='text-xl' />
                   <span className='text-sm font-semibold'>{blog.date}</span>
                 </div>
-                <CiBookmark className='text-3xl p-2 rounded-full shadow bg-gray-100 text-gray-700' />
+                <CiBookmark className='text-3xl hidden lg:block p-2 rounded-full shadow bg-gray-100 text-gray-700' />
               </div>
             </div>
           </Link>
