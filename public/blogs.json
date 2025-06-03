@@ -68,5 +68,35 @@
     "description": "How AI is changing the future of finance and business analytics.",
     "date": "2025-04-29",
     "category": "Technology"
+  },
+  {
+    "id": 11,
+    "title": "Winter Dressing Tips When It’s Really Cold Out",
+    "author": "Bin McKiny",
+    "img": "https://i.ibb.co/60DkzDbC/banner.jpg",
+    "authorImg": "https://i.ibb.co/r29T626c/e395de6d983ff5fd552a36947ee8d60cb937c8078624065edbc305d25a3287f7.jpg",
+    "description": "To mark the first UK show of artist Herni Brande, developers ThemesCamp and ",
+    "date": "2025-04-29",
+    "category": "Technology"
+  },
+  {
+    "id": 12,
+    "title": "Eco Friendly Travels Sustain Able Tourism and",
+    "author": "Bin McKiny",
+    "img": "https://byteflows.net/wp/forcast-main/wp-content/uploads/2024/07/post-2.webp",
+    "authorImg": "https://i.ibb.co/r29T626c/e395de6d983ff5fd552a36947ee8d60cb937c8078624065edbc305d25a3287f7.jpg",
+    "description": "How AI is changing the future of finance and business analytics.",
+    "date": "2025-04-29",
+    "category": "Technology"
+  },
+  {
+    "id": 13,
+    "title": "Sustain Living Eco-Friendly Habits for a Greener",
+    "author": "Bin McKiny",
+    "img": "https://byteflows.net/wp/forcast-main/wp-content/uploads/2024/07/post-1.webp",
+    "authorImg": "https://i.ibb.co/r29T626c/e395de6d983ff5fd552a36947ee8d60cb937c8078624065edbc305d25a3287f7.jpg",
+    "description": "How AI is changing the future of finance and business analytics.",
+    "date": "2025-04-29",
+    "category": "Technology"
   }
 ]

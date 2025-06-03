@@ -8,16 +8,14 @@ import PostBlog from './PostBlog/PostBlog';
 import MostBlogs from './MostBlogs/MostBlogs';
 import Discover from './Discover/Discover';
 import FromBlog from './FromBlog/FromBlog';
+import BlogContent from './BlogContent/BlogContent';
 
 const Home = () => {
     return (
         <div>
             <Top></Top>
+            <BlogContent></BlogContent>
             <div className='bg-base-100'>
-                <div className='flex flex-col lg:flex-row items-center w-full gap-6 max-w-7xl px-5 lg:px-10 mx-auto'>
-                    <Banner></Banner>
-                    <BannerContent></BannerContent>
-                </div>
                 <Blogs></Blogs>
                 <Preview></Preview>
             </div>

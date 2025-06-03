@@ -51,7 +51,7 @@ const Navbar = () => {
                     </button>
                     <NavLink to="/" className="flex items-center gap-1">Home <MdOutlineKeyboardArrowDown /></NavLink>
                     <NavLink to="/postFeatures" className="flex items-center gap-1">Post Features <MdOutlineKeyboardArrowDown className='text-sm' /></NavLink>
-                    <NavLink to="/teachology" className="flex items-center gap-1">Teachology <MdOutlineKeyboardArrowDown className='text-sm' /></NavLink>
+                    <NavLink to="/techology" className="flex items-center gap-1">Teachology <MdOutlineKeyboardArrowDown className='text-sm' /></NavLink>
                     <NavLink to="/lifeStyle" className="flex items-center gap-1">Lifestyle <MdOutlineKeyboardArrowDown className='text-sm' /></NavLink>
                     <NavLink to="/pages" className="flex items-center gap-1">Pages <MdOutlineKeyboardArrowDown className='text-sm' /></NavLink>
                     <NavLink to="/bookmark" className="flex items-center gap-1">Bookmark <MdOutlineKeyboardArrowDown className='text-sm' /></NavLink>

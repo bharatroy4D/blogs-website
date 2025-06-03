@@ -8,7 +8,7 @@ import useFetch from '../../../Components/CustomHooks/useFetch';
 
 const BlogsViewLeft = () => {
   const { id } = useParams();
-  const { data, loading, error } = useFetch({ url: '/blogs.json' });
+  const { data, loading, error } = useFetch({ url:'/blogs.json' });
 
   const blog = data?.find((b) => b.id === Number(id));
 
