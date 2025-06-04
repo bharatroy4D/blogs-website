@@ -56,7 +56,7 @@ const PostBlog = () => {
                     </button>
 
                     {/* Mobile: Short Description */}
-                    <h1 className='text-base font-semibold line-clamp-2 block lg:hidden'>
+                    <h1 className='text-sm font-semibold line-clamp-2 block lg:hidden'>
                       {post.description.split(' ').slice(0, 5).join(' ')}...
                     </h1>
 
@@ -65,12 +65,12 @@ const PostBlog = () => {
                       {post.description}
                     </h1>
 
-                    <div className='flex justify-between items-center mt-3'>
-                      <div className='flex items-center gap-2 text-sm text-gray-600 font-semibold'>
-                        <CiCalendarDate className='text-xl' />
+                    <div className='flex justify-between items-center lg:mt-3'>
+                      <div className='flex items-center gap-2 text-xs lg:text-sm text-gray-600 font-semibold'>
+                        <CiCalendarDate className='lg:text-xl' />
                         <span>{post.date}</span>
                       </div>
-                      <CiBookmark className='text-3xl shadow bg-gray-100 p-2 rounded-full hidden lg:block' />
+                      <CiBookmark className='text-lg lg:text-3xl shadow bg-gray-100 p-1 lg:p-2 rounded-full' />
                     </div>
                   </div>
                 </div>

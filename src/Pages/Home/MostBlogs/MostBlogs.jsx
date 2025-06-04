@@ -9,16 +9,17 @@ const MostBlogs = () => {
             <div className='max-w-7xl px-5 py-10 lg:px-10 mx-auto'>
                 <SectionTitle title={'Most Read'} view={<span className="hidden lg:block text-white">View All</span>} color='text-white' />
                 
-                <div className='flex flex-col lg:flex-row gap-5'>
+                <div className='flex flex-col lg:flex-row gap-5 pt-5'>
                     {/* left side */}
-                    <div className='flex flex-col gap-5 py-5 w-full lg:w-1/4'>
+                    <div className=' flex flex-col gap-5 group py-5 w-full lg:w-1/4'>
                         {/* card -1 */}
-                        <Card
+                        <Card 
                             img="https://byteflows.net/wp/forcast-main/wp-content/uploads/2024/09/oliver-pecker-HONJP8DyiSM-unsplash.webp"
                             category="Sport"
                             color="bg-gray-500"
                             title="USA and Portugal in Race for Final"
                             date="Sep 29, 2024"
+                            
                         />
                         {/* card -2 */}
                         <Card
@@ -32,11 +33,11 @@ const MostBlogs = () => {
 
                     {/* middle section */}
                     <div className='w-full lg:w-1/2 pt-5'>
-                        <div className='relative gap-3 rounded-xl shadow bg-white'>
+                        <div className='relative gap-3 rounded-xl group overflow-hidden shadow bg-white'>
                             <img
                                 src="https://byteflows.net/wp/forcast-main/wp-content/uploads/2024/05/blog-tech.webp"
                                 alt="Tech"
-                                className='w-full h-64 md:h-80 lg:h-64 object-cover rounded-t'
+                                className='w-full h-64 md:h-80 lg:h-64 object-cover transform hover:scale-110 duration-1000 rounded-t'
                             />
                             <div className='flex flex-col gap-3 p-5 bg-black/90 text-white'>
                                 <button className="text-sm text-white bg-blue-400 font-bold w-fit py-2 px-4 rounded">
@@ -46,7 +47,7 @@ const MostBlogs = () => {
                                 <p className='text-sm md:text-base font-semibold'>
                                     Lorem ipsum dolor sit amet consectetur. Ut tellus suspendisse nulla aliquam Risus rutrum ultrices pretium
                                 </p>
-                                <div className='flex flex-wrap items-center gap-5'>
+                                <div className='flex flex-wrap items-center gap-3 lg:gap-5'>
                                     <div className='flex gap-2 items-center'>
                                         <img
                                             src="https://secure.gravatar.com/avatar/e395de6d983ff5fd552a36947ee8d60cb937c8078624065edbc305d25a3287f7?s=25&d=mm&r=g"

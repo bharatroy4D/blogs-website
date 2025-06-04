@@ -41,7 +41,7 @@ const FromBlog = () => {
                 </div>
 
                 {/* Text Section */}
-                <div className="flex px-4  pb-4 flex-col justify-center w-full relative">
+                <div className="flex px-2 lg:px-4 pb-2 lg:pb-4 flex-col justify-center w-full relative">
                   {/* Category shown only in text section on lg screens */}
                   <div className="hidden lg:block">
                     <button
@@ -53,8 +53,8 @@ const FromBlog = () => {
                   </div>
 
                   {/* Title - short on mobile, full on large */}
-                  <h1 className="text-lg md:text-xl lg:hidden font-bold mt-2">
-                    {blog.description.slice(0, 20)}...
+                  <h1 className="text-sm md:text-xl lg:hidden font-bold ">
+                    {blog.description.slice(0, 30)}...
                   </h1>
                   <h1 className="hidden lg:block text-xl font-bold mt-2">
                     {blog.description}
