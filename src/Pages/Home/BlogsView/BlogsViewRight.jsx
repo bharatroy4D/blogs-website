@@ -16,7 +16,7 @@ const BlogsViewRight = () => {
       <div className='flex flex-col gap-5 shadow py-6 px-2 mt-10'>
         <h1 className='text-2xl font-bold border-b border-gray-400 pb-5'>Recent Post</h1>
         <div className='space-y-3'>
-          {data?.map((blog) => (
+          {data?.slice(0, 10).map((blog) => (
             <div key={blog.id} className='flex gap-4'>
               <img src={blog.img} alt="" className='w-24 h-24 rounded-md object-cover' />
               <div className='font-medium space-y-2'>

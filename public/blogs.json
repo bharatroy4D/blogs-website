@@ -57,6 +57,7 @@
   },
   {
     "id": 9,
+    "title": "Hot Dressing Tips When It’s Really Cold Out",
     "img": "https://byteflows.net/wp/forcast-main/wp-content/uploads/2024/05/lifestyle-4.webp",
     "description": "How AI is changing the future of finance and business analytics.",
     "date": "2025-04-29",
@@ -64,6 +65,7 @@
   },
   {
     "id": 10,
+    "title": "Top Programming Languages in 2025",
     "img": "https://byteflows.net/wp/forcast-main/wp-content/uploads/2024/05/tech-7.webp",
     "description": "How AI is changing the future of finance and business analytics.",
     "date": "2025-04-29",
@@ -77,7 +79,7 @@
     "authorImg": "https://i.ibb.co/r29T626c/e395de6d983ff5fd552a36947ee8d60cb937c8078624065edbc305d25a3287f7.jpg",
     "description": "To mark the first UK show of artist Herni Brande, developers ThemesCamp ",
     "date": "2025-04-29",
-    "category": "Technology"
+    "category": "Lifestyle"
   },
   {
     "id": 12,
@@ -87,7 +89,7 @@
     "authorImg": "https://i.ibb.co/r29T626c/e395de6d983ff5fd552a36947ee8d60cb937c8078624065edbc305d25a3287f7.jpg",
     "description": "How AI is changing the future of finance and business analytics.",
     "date": "2025-04-29",
-    "category": "Technology"
+    "category": "Lifestyle"
   },
   {
     "id": 13,
@@ -97,6 +99,166 @@
     "authorImg": "https://i.ibb.co/r29T626c/e395de6d983ff5fd552a36947ee8d60cb937c8078624065edbc305d25a3287f7.jpg",
     "description": "How AI is changing the future of finance and business analytics.",
     "date": "2025-04-29",
+    "category": "Lifestyle"
+  },
+  {
+    "id": 14,
+    "title": "Top Programming Languages in 2025",
+    "author": "Ava Martin",
+    "img": "https://byteflows.net/wp/forcast-main/wp-content/uploads/2024/05/tech-1.webp",
+    "authorImg": "https://i.ibb.co/LrVMXNR/avatar1.png",
+    "description": "A breakdown of the most popular and in-demand programming languages this year.",
+    "date": "2025-05-11",
     "category": "Technology"
+  },
+  {
+    "id": 15,
+    "title": "Future of Blockchain Beyond Cryptocurrency",
+    "author": "Jake Coleman",
+    "img": "https://byteflows.net/wp/forcast-main/wp-content/uploads/2024/07/post-main.webp",
+    "authorImg": "https://i.ibb.co/yYkz6PZ/avatar2.png",
+    "description": "Exploring how blockchain is transforming supply chains, security, and data storage.",
+    "date": "2025-05-10",
+    "category": "Technology"
+  },
+  {
+    "id": 16,
+    "title": "Top 5 Tech Gadgets You Should Own in 2025",
+    "author": "Sophia Lee",
+    "img": "https://byteflows.net/wp/forcast-main/wp-content/uploads/2024/05/tech-3.webp",
+    "authorImg": "https://i.ibb.co/gVR7c2k/avatar3.png",
+    "description": "A review of this year’s most innovative tech gadgets for personal and professional use.",
+    "date": "2025-05-09",
+    "category": "Technology"
+  },
+  {
+    "id": 17,
+    "title": "The Rise of Quantum Computing",
+    "author": "David Chen",
+    "img": "https://byteflows.net/wp/forcast-main/wp-content/uploads/2024/05/tech-4.webp",
+    "authorImg": "https://i.ibb.co/tM7nYyv/avatar4.png",
+    "description": "What is quantum computing and how it could change everything we know about tech.",
+    "date": "2025-05-08",
+    "category": "Technology"
+  },
+  {
+    "id": 18,
+    "title": "Tech Startups to Watch in 2025",
+    "author": "Emma Brooks",
+    "img": "https://byteflows.net/wp/forcast-main/wp-content/uploads/2024/09/techno.webp",
+    "authorImg": "https://i.ibb.co/Vj5bGHF/avatar5.png",
+    "description": "12 emerging tech startups revolutionizing AI, healthcare, and cybersecurity.",
+    "date": "2025-05-07",
+    "category": "Technology"
+  },
+  {
+    "id": 19,
+    "title": "How 5G is Changing Mobile Development",
+    "author": "James Carter",
+    "img": "https://byteflows.net/wp/forcast-main/wp-content/uploads/2024/05/tech-6.webp",
+    "authorImg": "https://i.ibb.co/XZHRD8x/avatar6.png",
+    "description": "The speed and reliability of 5G are enabling new mobile experiences like never before.",
+    "date": "2025-05-06",
+    "category": "Technology"
+  },
+  {
+    "id": 20,
+    "title": "Augmented Reality in Everyday Life",
+    "author": "Liam Turner",
+    "img": "https://byteflows.net/wp/forcast-main/wp-content/uploads/2024/05/tech-005-3.webp",
+    "authorImg": "https://i.ibb.co/8K6LtbG/avatar7.png",
+    "description": "AR is no longer just for games — it's reshaping navigation, shopping, and education.",
+    "date": "2025-05-05",
+    "category": "Technology"
+  },
+  {
+    "id": 21,
+    "title": "Cybersecurity Tips for Remote Workers",
+    "author": "Nina Wells",
+    "img": "https://byteflows.net/wp/forcast-main/wp-content/uploads/2024/05/blog-tech.webp",
+    "authorImg": "https://i.ibb.co/qphs1Y0/avatar8.png",
+    "description": "Protect yourself from phishing, data theft, and more with these remote work tips.",
+    "date": "2025-05-04",
+    "category": "Technology"
+  },
+  {
+    "id": 22,
+    "title": "Smart Homes: What’s New in 2025",
+    "author": "Oliver Smith",
+    "img": "https://byteflows.net/wp/forcast-main/wp-content/uploads/2024/03/apple.webp",
+    "authorImg": "https://i.ibb.co/xq5XKnY/avatar9.png",
+    "description": "From lighting to security — the future of smart home technology is here.",
+    "date": "2025-05-03",
+    "category": "Technology"
+  },
+  {
+    "id": 23,
+    "title": "The Role of AI in Mental Health Tech",
+    "author": "Maya Singh",
+    "img": "https://byteflows.net/wp/forcast-main/wp-content/uploads/2024/05/tech-2.webp",
+    "authorImg": "https://i.ibb.co/Dfp3RcS/avatar10.png",
+    "description": "How artificial intelligence is powering new mental health apps and services.",
+    "date": "2025-05-02",
+    "category": "Technology"
+  },
+  {
+    "id": 24,
+    "title": "Tech Education: Learning to Code in 2025",
+    "author": "Ethan Johnson",
+    "img": "https://byteflows.net/wp/forcast-main/wp-content/uploads/2024/05/tec-desk.webp",
+    "authorImg": "https://i.ibb.co/nCyR8nL/avatar11.png",
+    "description": "A look into the latest online tools, bootcamps, and platforms for learning code.",
+    "date": "2025-05-01",
+    "category": "Technology"
+  },
+  {
+    "id": 25,
+    "title": "Morning Routines That Boost Productivity",
+    "author": "Sophia Green",
+    "img": "https://byteflows.net/wp/forcast-main/wp-content/uploads/2024/05/fashion.webp",
+    "authorImg": "https://i.ibb.co/4mLZKwL/avatar1.png",
+    "description": "Discover how a simple morning routine can change the course of your day.",
+    "date": "2025-05-02",
+    "category": "Lifestyle"
+  },
+  {
+    "id": 26,
+    "title": "Minimalist Living: Less is More",
+    "author": "Liam Parker",
+    "img": "https://byteflows.net/wp/forcast-main/wp-content/uploads/2024/05/lfs-3-2048x1865.webp",
+    "authorImg": "https://i.ibb.co/ZG0Hszp/avatar2.png",
+    "description": "Tips and inspiration to embrace a minimalist lifestyle in a cluttered world.",
+    "date": "2025-05-03",
+    "category": "Lifestyle"
+  },
+  {
+    "id": 27,
+    "title": "Healthy Eating on a Budget",
+    "author": "Emma Wilson",
+    "img": "https://byteflows.net/wp/forcast-main/wp-content/uploads/2024/05/lfs-4.webp",
+    "authorImg": "https://i.ibb.co/k9TZfBn/avatar3.png",
+    "description": "Simple and affordable meal ideas for a healthy lifestyle.",
+    "date": "2025-05-04",
+    "category": "Lifestyle"
+  },
+  {
+    "id": 28,
+    "title": "Digital Detox: Reclaiming Your Time",
+    "author": "Noah Smith",
+    "img": "https://byteflows.net/wp/forcast-main/wp-content/uploads/2024/08/blog-travel.webp",
+    "authorImg": "https://i.ibb.co/XJHnZYZ/avatar4.png",
+    "description": "Unplug and recharge—how a digital detox can improve your well-being.",
+    "date": "2025-05-05",
+    "category": "Lifestyle"
+  },
+  {
+    "id": 29,
+    "title": "Creating a Cozy Home Environment",
+    "author": "Olivia Davis",
+    "img": "https://byteflows.net/wp/forcast-main/wp-content/uploads/2024/05/travel-3-3.webp",
+    "authorImg": "https://i.ibb.co/0Fx5fF9/avatar5.png",
+    "description": "Design your living space for comfort, peace, and positivity.",
+    "date": "2025-05-06",
+    "category": "Lifestyle"
   }
 ]

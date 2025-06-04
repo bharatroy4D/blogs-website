@@ -22,8 +22,8 @@ const BlogsViewLeft = () => {
         <h3 className='flex items-center text-gray-600 font-semibold mb-7'>
           Home
           <MdOutlineKeyboardArrowRight className='text-xl ml-5' />
-          <span className='block lg:hidden ml-5 text-xl text-black'>{blog.description.length > 20 ? blog.description.slice(0, 20) + "..." : blog.description}</span>
-          <span className='hidden lg:block ml-5 text-xl text-black'>{blog.description}</span>
+          <span className='block lg:hidden roboto ml-5 text-lg text-black'>{blog.description.length > 20 ? blog.description.slice(0, 20) + "..." : blog.description}</span>
+          <span className='hidden lg:block ml-5 lato text-lg text-black'>{blog.description}</span>
           
         </h3>
 

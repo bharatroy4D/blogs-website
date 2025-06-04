@@ -5,10 +5,9 @@ import useFetch from '../../../Components/CustomHooks/useFetch';
 import { Link } from 'react-router-dom';
 
 const BlogContent = () => {
-    const { data, loading, error } = useFetch({ url: 'blogs.json' });
+    const { data, error } = useFetch({ url: 'blogs.json' });
     const blogs = data?.slice(10, 13); // 3 blog card
 
-    if (loading) return <p className="text-center py-10">Loading...</p>;
     if (error) return <p className="text-center py-10 text-red-500">{error}</p>;
     if (!blogs || blogs.length < 3) return <p className="text-center py-10">Not enough blog data</p>;
 
