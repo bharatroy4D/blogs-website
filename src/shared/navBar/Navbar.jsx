@@ -51,11 +51,11 @@ const Navbar = () => {
                             <IoClose />
                         </button>
                     </div>
-                    <NavLink to="/" onClick={() => setMenuOpen(false)} className="flex items-center gap-1">Home <MdOutlineKeyboardArrowDown /></NavLink>
-                    <NavLink to="/technology" onClick={() => setMenuOpen(false)} className="flex items-center gap-1">Technology <MdOutlineKeyboardArrowDown className='text-sm' /></NavLink>
-                    <NavLink to="/lifeStyle" onClick={() => setMenuOpen(false)} className="flex items-center gap-1">Lifestyle <MdOutlineKeyboardArrowDown className='text-sm' /></NavLink>
-                    <NavLink to="/pages" onClick={() => setMenuOpen(false)} className="flex items-center gap-1">Pages <MdOutlineKeyboardArrowDown className='text-sm' /></NavLink>
-                    <NavLink to="/bookmarks" onClick={() => setMenuOpen(false)} className="flex items-center gap-1">Bookmark <MdOutlineKeyboardArrowDown className='text-sm' /></NavLink>
+                    <NavLink to="/" onClick={() => setMenuOpen(false)} className="flex items-center gap-1">Home </NavLink>
+                    <NavLink to="/technology" onClick={() => setMenuOpen(false)} className="flex items-center gap-1">Technology </NavLink>
+                    <NavLink to="/lifeStyle" onClick={() => setMenuOpen(false)} className="flex items-center gap-1">Lifestyle </NavLink>
+                    <NavLink to="/pages" onClick={() => setMenuOpen(false)} className="flex items-center gap-1">Pages</NavLink>
+                    <NavLink to="/bookmarks" onClick={() => setMenuOpen(false)} className="flex items-center gap-1">Bookmark </NavLink>
                 </div>
             </div>
 
