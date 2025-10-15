@@ -18,13 +18,12 @@ const Navbar = () => {
                     <img src={logo} alt="Logo" className='w-32 md:w-40' />
 
                     {/* Nav Links for large device */}
-                    <div className='hidden lg:flex gap-6 items-center text-base font-semibold'>
-                        <NavLink to="/" className="flex items-center gap-1">Home <MdOutlineKeyboardArrowDown /></NavLink>
-                        {/* <NavLink to="/postFeatures" className="flex items-center gap-1">Post Features <MdOutlineKeyboardArrowDown className='text-sm' /></NavLink> */}
-                        <NavLink to="/technology" className="flex items-center gap-1">Technology <MdOutlineKeyboardArrowDown className='text-sm' /></NavLink>
-                        <NavLink to="/lifeStyle" className="flex items-center gap-1">Lifestyle <MdOutlineKeyboardArrowDown className='text-sm' /></NavLink>
-                        <NavLink to="/pages" className="flex items-center gap-1">Pages <MdOutlineKeyboardArrowDown className='text-sm' /></NavLink>
-                        <NavLink to="/bookmarks" className="flex items-center gap-1">Bookmark <MdOutlineKeyboardArrowDown className='text-sm' /></NavLink>
+                    <div className='hidden lg:flex gap-10 items-center text-base font-semibold'>
+                        <NavLink to="/" className="flex items-center gap-1">Home</NavLink>
+                        <NavLink to="/technology" className="flex items-center gap-1">Technology </NavLink>
+                        <NavLink to="/lifeStyle" className="flex items-center gap-1">Lifestyle </NavLink>
+                        <NavLink to="/pages" className="flex items-center gap-1">Pages</NavLink>
+                        <NavLink to="/bookmarks" className="flex items-center gap-1">Bookmark </NavLink>
                     </div>
 
                     {/* Icons + Hamburger */}
