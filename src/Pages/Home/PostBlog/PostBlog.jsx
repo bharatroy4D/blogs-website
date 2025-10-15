@@ -1,8 +1,8 @@
 import React from 'react';
 import { CiBookmark, CiCalendarDate } from 'react-icons/ci';
 import SectionTitle from '../../../Components/SectionTitle/SectionTitle';
-import useFetch from '../../../Components/CustomHooks/useFetch';
 import { Link } from 'react-router-dom';
+import useFetch from '../../../hooks/useFetch';
 
 const categoryColors = {
   Health: 'bg-green-400',

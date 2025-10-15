@@ -1,6 +1,6 @@
 import React from 'react';
-import useFetch from '../../../Components/CustomHooks/useFetch';
 import { BsCalendarDate } from 'react-icons/bs';
+import useFetch from '../../../hooks/useFetch';
 
 const BlogsViewRight = () => {
   const { data } = useFetch({ url: '/blogs.json' });

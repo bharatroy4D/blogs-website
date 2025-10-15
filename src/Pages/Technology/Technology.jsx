@@ -1,7 +1,7 @@
 import React from 'react';
-import useFetch from '../../Components/CustomHooks/useFetch';
 import { CiCalendarDate } from 'react-icons/ci';
 import { Link } from 'react-router-dom';
+import useFetch from '../../hooks/useFetch';
 
 const Technology = () => {
     const { data, loading, error } = useFetch({ url: '/blogs.json' });

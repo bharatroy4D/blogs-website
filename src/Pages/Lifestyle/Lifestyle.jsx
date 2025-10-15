@@ -1,5 +1,5 @@
 import React from 'react';
-import useFetch from '../../Components/CustomHooks/useFetch';
+import useFetch from '../../hooks/useFetch';
 
 const Lifestyle = () => {
     const { data, loading, error } = useFetch({ url: 'blogs.json' });

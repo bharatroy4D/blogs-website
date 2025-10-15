@@ -1,6 +1,6 @@
 import React from 'react';
 import SectionTitle from '../../../Components/SectionTitle/SectionTitle';
-import useFetch from '../../../Components/CustomHooks/useFetch';
+import useFetch from '../../../hooks/useFetch';
 
 const Discover = () => {
     const { data, loading, error } = useFetch({ url: 'discover.json' });

@@ -4,7 +4,7 @@ import { CiBookmark, CiCalendarDate } from 'react-icons/ci';
 import { FaRegCircleCheck, FaRegComment } from 'react-icons/fa6';
 import { IoEye } from 'react-icons/io5';
 import { useParams } from 'react-router-dom';
-import useFetch from '../../../Components/CustomHooks/useFetch';
+import useFetch from '../../../hooks/useFetch';
 
 const BlogsViewLeft = () => {
   const { id } = useParams();

@@ -1,8 +1,8 @@
 import React from 'react';
 import { CiBookmark, CiCalendarDate } from 'react-icons/ci';
 import { FaRegComment } from 'react-icons/fa6';
-import useFetch from '../../../Components/CustomHooks/useFetch';
 import { Link } from 'react-router-dom';
+import useFetch from '../../../hooks/useFetch';
 
 const BlogContent = () => {
     const { data, error } = useFetch({ url: 'blogs.json' });

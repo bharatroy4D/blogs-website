@@ -1,8 +1,8 @@
 import React from 'react';
 import { CiBookmark, CiCalendarDate } from 'react-icons/ci';
 import { Link } from 'react-router-dom';
-import useFetch from '../../../Components/CustomHooks/useFetch';
 import { IoArrowForwardCircleOutline } from 'react-icons/io5';
+import useFetch from '../../../hooks/useFetch';
 
 const Blogs = () => {
   const { data, loading, error } = useFetch({ url: "blogs.json" });
