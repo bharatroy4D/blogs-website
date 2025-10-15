@@ -9,45 +9,73 @@ const Blogs = () => {
 
   const badgeColors = ['bg-blue-600', 'bg-green-600', 'bg-purple-600', 'bg-pink-600'];
 
-  if (loading) return <p className="text-center text-lg py-10">Loading...</p>;
-  if (error) return <p className="text-center text-red-500 py-10">Error loading blogs.</p>;
+  if (loading)
+    return (
+      <div className="flex justify-center items-center py-20">
+        <p className="text-blue-500 font-semibold text-lg animate-pulse">
+          Loading latest blogs...
+        </p>
+      </div>
+    );
+
+  if (error)
+    return (
+      <p className="text-center text-red-500 font-semibold py-10">
+        Error loading blogs. Please try again later.
+      </p>
+    );
 
   return (
-    <div className='max-w-7xl px-5 py-10 lg:px-10 mx-auto'>
-      <h2 className='flex items-center justify-between roboto text-2xl lg:text-3xl font-bold mb-6'>Latest Blogs <IoArrowForwardCircleOutline className='text-3xl lg:hidden' />
-      </h2>
+    <div className="max-w-7xl mx-auto px-5 lg:px-10 py-12">
+      {/* Header */}
+      <div className="flex items-center justify-between mb-8">
+        <h2 className="text-2xl lg:text-3xl font-extrabold text-gray-800 tracking-tight">
+          Latest Blogs
+        </h2>
+        <IoArrowForwardCircleOutline className="text-3xl text-blue-600 cursor-pointer hover:text-blue-800 transition hidden lg:block" />
+      </div>
 
-
-      {/* Responsive Grid */}
-      <div className='grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-4'>
+      {/* Blog Grid */}
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {data.slice(0, 4).map((blog, index) => (
-          <Link key={blog.id} to={`/blogsView/${blog.id}`} className='group'>
-            <div className='relative flex flex-col gap-2 shadow rounded overflow-hidden bg-white hover:shadow-xl transition duration-300'>
+          <Link
+            key={blog.id}
+            to={`/blogsView/${blog.id}`}
+            className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 border border-gray-100"
+          >
+            {/* Blog Image */}
+            <div className="relative overflow-hidden">
               <img
                 src={blog.img}
-                alt="Blog Cover"
-                className='w-full h-32 lg:h-44 object-cover rounded-t transform group-hover:scale-105 transition duration-500'
+                alt={blog.title}
+                loading="lazy"
+                className="w-full h-48 object-cover transform group-hover:scale-110 transition duration-700 ease-out"
               />
-              <p className={`absolute top-28 left-3 z-10 text-sm font-bold text-white rounded w-fit py-1 px-2 ${badgeColors[index % badgeColors.length]}`}>
+              <span
+                className={`absolute top-3 left-3 text-xs font-semibold text-white uppercase tracking-wide py-1 px-3 rounded-full ${badgeColors[index % badgeColors.length]
+                  }`}
+              >
                 {blog.category}
-              </p>
+              </span>
+            </div>
 
-              {/* Mobile: sliced description */}
-              <p className='text-gray-700 text-sm font-medium py-1 px-4 block lg:hidden'>
-                {blog.description.slice(0, 20)}...
-              </p>
+            {/* Blog Info */}
+            <div className="p-4 flex flex-col justify-between h-[180px]">
+              <h3 className="text-lg font-bold text-gray-800 group-hover:text-blue-600 line-clamp-2">
+                {blog.title}
+              </h3>
 
-              {/* Large: full description */}
-              <p className='text-gray-700 font-medium py-1 px-4 hidden lg:block'>
+              <p className="text-sm text-gray-600 line-clamp-3 my-2">
                 {blog.description}
               </p>
 
-              <div className='flex justify-between items-center px-2 pb-2'>
-                <div className='flex items-center gap-2 text-gray-600'>
-                  <CiCalendarDate className='lg:text-xl' />
-                  <span className='text-xs lg:text-sm font-semibold'>{blog.date}</span>
+              {/* Footer */}
+              <div className="flex justify-between items-center text-gray-500">
+                <div className="flex items-center gap-2">
+                  <CiCalendarDate className="text-lg" />
+                  <span className="text-xs font-medium">{blog.date}</span>
                 </div>
-                <CiBookmark className='text-3xl hidden lg:block p-2 rounded-full shadow bg-gray-100 text-gray-700' />
+                <CiBookmark className="text-2xl hover:text-blue-500 transition" />
               </div>
             </div>
           </Link>
