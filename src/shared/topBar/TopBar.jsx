@@ -7,7 +7,7 @@ const TopBar = () => {
     return (
         <div className="bg-[#891EF9] text-white text-sm">
             <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center py-2 px-4 lg:px-10 gap-2">
-                
+
                 {/* Left: Quick Links */}
                 <div className="flex flex-wrap text-xs lg:text-sm gap-3 items-center justify-center lg:justify-start">
                     <p className="font-normal">Quick Links:</p>
