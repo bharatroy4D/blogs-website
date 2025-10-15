@@ -5,73 +5,68 @@ import { Link } from 'react-router-dom';
 import useFetch from '../../../hooks/useFetch';
 
 const categoryColors = {
-  Health: 'bg-green-400',
-  Technology: 'bg-blue-400',
-  Lifestyle: 'bg-pink-400',
-  Business: 'bg-yellow-400',
-  Travel: 'bg-purple-400',
-  Education: 'bg-red-400',
-  Default: 'bg-gray-400',
+  Health: 'bg-green-500',
+  Technology: 'bg-blue-500',
+  Lifestyle: 'bg-pink-500',
+  Business: 'bg-yellow-500',
+  Travel: 'bg-purple-500',
+  Education: 'bg-red-500',
+  Default: 'bg-gray-500',
 };
 
 const PostBlog = () => {
   const { data, loading, error } = useFetch({ url: 'blogs.json' });
 
   return (
-    <div className='bg-blue-50'>
-      <div className='max-w-7xl px-5 py-8 mt-6 lg:px-10 mx-auto'>
-        <SectionTitle title={'Most Post Discussed'} view={'View All'} />
+    <section className="bg-gradient-to-b from-blue-50 to-white py-12">
+      <div className="max-w-7xl mx-auto px-5 lg:px-10">
+        <SectionTitle title="Most Discussed Posts" view="View All" />
 
-        {loading && <p>Loading...</p>}
-        {error && <p className="text-red-500">Error: {error}</p>}
+        {loading && <p className="text-center text-gray-600 py-10 text-lg">Loading...</p>}
+        {error && <p className="text-center text-red-500 py-10 text-lg">Error: {error}</p>}
 
-        <div className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-5 py-10'>
+        {/* Blog Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
           {data?.slice(4, 10).map((post) => {
             const bgClass = categoryColors[post.category] || categoryColors.Default;
 
             return (
-              <Link key={post.id} to={`/blogsView/${post.id}`}>
-                <div className='relative gap-3 rounded shadow bg-white overflow-hidden'>
-                  <div className="relative">
-                    <img
-                      src={post.img}
-                      alt={post.category}
-                      className='w-full h-32 lg:h-48 object-cover rounded-t transform hover:scale-105 transition duration-1000'
-                    />
+              <Link
+                key={post.id}
+                to={`/blogsView/${post.id}`}
+                className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-500 overflow-hidden border border-gray-100"
+              >
+                {/* Image */}
+                <div className="relative overflow-hidden">
+                  <img
+                    src={post.img}
+                    alt={post.title || post.category}
+                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-700"
+                    loading="lazy"
+                  />
+                  <span
+                    className={`absolute top-3 left-3 text-xs font-semibold text-white px-3 py-1 rounded-full ${bgClass}`}
+                  >
+                    {post.category}
+                  </span>
+                </div>
 
-                    {/* Category badge on image for mobile */}
-                    <button
-                      className={`absolute top-2 left-2 text-xs text-white font-bold py-1 px-2 rounded ${bgClass} lg:hidden`}
-                    >
-                      {post.category}
-                    </button>
-                  </div>
+                {/* Content */}
+                <div className="p-5 flex flex-col justify-between gap-3">
+                  <h2 className="text-lg font-bold text-gray-800 group-hover:text-indigo-600 transition-colors duration-300 line-clamp-2">
+                    {post.title || post.description.split(' ').slice(0, 8).join(' ')}...
+                  </h2>
 
-                  <div className='flex flex-col gap-3 p-3 lg:p-5'>
-                    {/* Category badge for large devices */}
-                    <button
-                      className={`text-sm text-white font-bold w-fit py-1 px-3 rounded hidden lg:block ${bgClass}`}
-                    >
-                      {post.category}
-                    </button>
+                  <p className="text-sm text-gray-600 line-clamp-2">
+                    {post.description}
+                  </p>
 
-                    {/* Mobile: Short Description */}
-                    <h1 className='text-sm font-semibold line-clamp-2 block lg:hidden'>
-                      {post.description.split(' ').slice(0, 5).join(' ')}...
-                    </h1>
-
-                    {/* Large screen: Full Description */}
-                    <h1 className='text-base font-semibold hidden lg:block'>
-                      {post.description}
-                    </h1>
-
-                    <div className='flex justify-between items-center lg:mt-3'>
-                      <div className='flex items-center gap-2 text-xs lg:text-sm text-gray-600 font-semibold'>
-                        <CiCalendarDate className='lg:text-xl' />
-                        <span>{post.date}</span>
-                      </div>
-                      <CiBookmark className='text-lg lg:text-3xl shadow bg-gray-100 p-1 lg:p-2 rounded-full' />
+                  <div className="flex justify-between items-center mt-3 text-gray-500">
+                    <div className="flex items-center gap-2 text-xs font-medium">
+                      <CiCalendarDate className="text-lg text-gray-400" />
+                      <span>{post.date}</span>
                     </div>
+                    <CiBookmark className="text-2xl hover:text-indigo-600 transition duration-300 cursor-pointer" />
                   </div>
                 </div>
               </Link>
@@ -79,7 +74,7 @@ const PostBlog = () => {
           })}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
