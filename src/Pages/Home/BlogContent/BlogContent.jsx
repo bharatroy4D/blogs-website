@@ -68,7 +68,7 @@ const BlogContent = () => {
         </Link>
 
         {/* ===== Right: Two Smaller Blogs ===== */}
-        <div className="flex flex-col gap-6 border-2 border-yellow-400 justify-between">
+        <div className="flex flex-col gap-6 justify-between">
           {blogs.slice(1).map((item, index) => (
             <Link
               key={item.id}
@@ -91,7 +91,7 @@ const BlogContent = () => {
                 </span>
               </div>
 
-              <div className="flex flex-col justify-between gap-2 sm:gap-3">
+              <div className="flex flex-col justify-between gap-2 px-2 py-4 sm:gap-3">
                 <h2 className="text-base md:text-lg font-semibold text-gray-800 hover:text-blue-600 line-clamp-2 transition">
                   {item.title}
                 </h2>
