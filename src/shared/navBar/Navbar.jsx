@@ -68,11 +68,11 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-40 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 h-full w-64 bg-gray-900/90 shadow-lg z-40 transform transition-transform duration-300 ease-in-out ${
           menuOpen ? "translate-x-0" : "translate-x-full"
         } lg:hidden`}
       >
-        <div className="flex flex-col gap-4 p-6 text-base font-semibold text-gray-700">
+        <div className="flex flex-col gap-4 p-6 text-base font-semibold text-white">
           <div className="flex justify-between items-center border-b pb-2">
             <h1 className="text-xl font-bold">Menu</h1>
             <button
