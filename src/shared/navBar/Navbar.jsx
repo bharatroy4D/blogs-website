@@ -12,15 +12,11 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Scroll Down করলে fixed হবে
       if (window.scrollY > lastScrollY && window.scrollY > 100) {
         setIsFixed(true);
-      } 
-      // Scroll Up করলে normal হবে
-      else if (window.scrollY < lastScrollY) {
+      } else if (window.scrollY < lastScrollY) {
         setIsFixed(false);
       }
-
       setLastScrollY(window.scrollY);
     };
 
@@ -32,23 +28,40 @@ const Navbar = () => {
     <div
       className={`w-full z-50 transition-all duration-500 ${
         isFixed
-          ? "fixed top-0 left-0 bg-blue-50 shadow-md animate-slideDown"
-          : "relative bg-blue-50"
+          ? "fixed top-0 left-0 bg-blue-600 shadow-md text-white"
+          : "relative bg-blue-50 text-black"
       }`}
     >
       <div className="max-w-7xl px-5 lg:px-10 mx-auto">
         <div className="flex items-center justify-between py-5">
-
           {/* Logo */}
           <img src={logo} alt="Logo" className="w-32 md:w-40" />
 
           {/* Nav Links */}
           <div className="hidden lg:flex gap-10 items-center text-base font-semibold">
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/technology">Technology</NavLink>
-            <NavLink to="/lifeStyle">Lifestyle</NavLink>
-            <NavLink to="/pages">Pages</NavLink>
-            <NavLink to="/bookmarks">Bookmark</NavLink>
+            {[
+              { to: "/", label: "Home" },
+              { to: "/technology", label: "Technology" },
+              { to: "/lifeStyle", label: "Lifestyle" },
+              { to: "/pages", label: "Pages" },
+              { to: "/bookmarks", label: "Bookmark" },
+            ].map((link) => (
+              <NavLink
+                key={link.to}
+                to={link.to}
+                className={({ isActive }) =>
+                  `transition-colors duration-300 ${
+                    isActive
+                      ? isFixed
+                        ? "text-yellow-300 border-b-2 border-yellow-300 pb-1"
+                        : "text-blue-600 border-b-2 border-blue-600 pb-1"
+                      : "hover:text-blue-500"
+                  }`
+                }
+              >
+                {link.label}
+              </NavLink>
+            ))}
           </div>
 
           {/* Icons + Hamburger */}
@@ -82,21 +95,27 @@ const Navbar = () => {
               <IoClose />
             </button>
           </div>
-          <NavLink to="/" onClick={() => setMenuOpen(false)}>
-            Home
-          </NavLink>
-          <NavLink to="/technology" onClick={() => setMenuOpen(false)}>
-            Technology
-          </NavLink>
-          <NavLink to="/lifeStyle" onClick={() => setMenuOpen(false)}>
-            Lifestyle
-          </NavLink>
-          <NavLink to="/pages" onClick={() => setMenuOpen(false)}>
-            Pages
-          </NavLink>
-          <NavLink to="/bookmarks" onClick={() => setMenuOpen(false)}>
-            Bookmark
-          </NavLink>
+
+          {[
+            { to: "/", label: "Home" },
+            { to: "/technology", label: "Technology" },
+            { to: "/lifeStyle", label: "Lifestyle" },
+            { to: "/pages", label: "Pages" },
+            { to: "/bookmarks", label: "Bookmark" },
+          ].map((link) => (
+            <NavLink
+              key={link.to}
+              to={link.to}
+              onClick={() => setMenuOpen(false)}
+              className={({ isActive }) =>
+                `transition-colors duration-300 ${
+                  isActive ? "text-yellow-300" : "text-white hover:text-blue-400"
+                }`
+              }
+            >
+              {link.label}
+            </NavLink>
+          ))}
         </div>
       </div>
     </div>
