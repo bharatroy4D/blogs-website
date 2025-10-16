@@ -28,7 +28,7 @@ const Navbar = () => {
     <div
       className={`w-full z-50 transition-all duration-500 ${
         isFixed
-          ? "fixed top-0 left-0 bg-blue-600 shadow-md text-white"
+          ? "fixed top-0 left-0 bg-blue-800 shadow-md text-white"
           : "relative bg-blue-50 text-black"
       }`}
     >
