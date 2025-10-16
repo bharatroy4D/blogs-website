@@ -17,7 +17,7 @@ const Home = () => {
             <BlogContent />
             <div className="bg-base-100">
                 <Blogs />
-                {/* <Preview /> */}
+                <Preview />
             </div>
             <PostBlog />
             <MostBlogs />

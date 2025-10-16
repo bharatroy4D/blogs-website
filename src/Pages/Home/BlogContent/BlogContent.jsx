@@ -1,110 +1,124 @@
-import React from 'react';
-import { CiBookmark, CiCalendarDate } from 'react-icons/ci';
-import { FaRegComment } from 'react-icons/fa6';
-import { Link } from 'react-router-dom';
-import useFetch from '../../../hooks/useFetch';
+import React from "react";
+import { CiBookmark, CiCalendarDate } from "react-icons/ci";
+import { FaRegComment } from "react-icons/fa6";
+import { Link } from "react-router-dom";
+import useFetch from "../../../hooks/useFetch";
 
 const BlogContent = () => {
-    const { data, error } = useFetch({ url: 'blogs.json' });
-    const blogs = data?.slice(10, 13); // 3 blog card
+  const { data, error } = useFetch({ url: "blogs.json" });
+  const blogs = data?.slice(10, 13); // show 3 blogs
 
-    if (error) return <p className="text-center py-10 text-red-500">{error}</p>;
-    if (!blogs || blogs.length < 3) return <p className="text-center py-10">Not enough blog data</p>;
+  if (error)
+    return <p className="text-center py-10 text-red-500">{error}</p>;
+  if (!blogs || blogs.length < 3)
+    return <p className="text-center py-10">Not enough blog data</p>;
 
-    return (
-        <div className="max-w-7xl px-4 sm:px-6 lg:px-10 mx-auto my-6">
-            <div className="flex flex-col lg:grid lg:grid-cols-2 gap-4">
+  return (
+    <section className="max-w-7xl mx-auto px-5 lg:px-10 my-10">
+      <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8">
 
-                {/* Left Side: Large Card */}
-                <Link to={`/blogsView/${blogs[0]?.id}`}>
-                    <div className="relative rounded-2xl overflow-hidden h-[300px] sm:h-[350px] lg:h-full">
-                        <img src={blogs[0]?.img} alt="Banner" className="w-full h-full object-cover" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent z-0"></div>
+        {/* ===== Left: Large Highlight Blog ===== */}
+        <Link
+          to={`/blogsView/${blogs[0]?.id}`}
+          className="relative group rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500"
+        >
+          <img
+            src={blogs[0]?.img}
+            alt={blogs[0]?.title}
+            loading="lazy"
+            className="w-full h-[360px] sm:h-[420px] object-cover group-hover:scale-105 duration-700"
+          />
 
-                        {/* Text Content */}
-                        <div className="absolute inset-x-0 bottom-4 px-4 sm:px-6 lg:px-10 z-10 text-white flex flex-col gap-2 sm:gap-3">
-                            <button className="text-xs sm:text-sm font-bold py-1 px-3 rounded bg-blue-400 w-max">
-                                {blogs[0]?.category}
-                            </button>
-                            <h1 className="text-base sm:text-xl md:text-2xl lg:text-3xl font-bold leading-snug">
-                                {blogs[0]?.title}
-                            </h1>
-                            <p className="text-xs sm:text-sm font-medium line-clamp-2">
-                                {blogs[0]?.description}
-                            </p>
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent"></div>
 
-                            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs sm:text-sm">
-                                <div className="flex gap-2 items-center">
-                                    <img
-                                        src={blogs[0]?.authorImg}
-                                        alt="Author"
-                                        className="w-6 h-6 sm:w-7 sm:h-7 rounded-full"
-                                    />
-                                    <h2 className="font-bold">{blogs[0]?.author}</h2>
-                                </div>
-                                <div className="flex items-center gap-2">
-                                    <CiCalendarDate className="text-lg" />
-                                    <span className="font-semibold">{blogs[0]?.date}</span>
-                                </div>
-                                <div className="hidden md:flex items-center gap-2">
-                                    <FaRegComment className="text-lg" />
-                                    <span className="font-semibold">{blogs[0]?.comments || 0} comments</span>
-                                </div>
-                                <CiBookmark className="bg-base-100/45 text-2xl p-1.5 rounded-full ml-auto" />
-                            </div>
-                        </div>
-                    </div>
-                </Link>
+          {/* Content */}
+          <div className="absolute bottom-6 left-6 right-6 text-white space-y-3">
+            <button className="text-xs sm:text-sm font-semibold py-1 px-3 rounded-md bg-blue-500/80 backdrop-blur-md">
+              {blogs[0]?.category}
+            </button>
+            <h1 className="text-lg sm:text-2xl md:text-3xl font-bold leading-snug line-clamp-2">
+              {blogs[0]?.title}
+            </h1>
+            <p className="hidden sm:block text-sm text-gray-200 line-clamp-2">
+              {blogs[0]?.description}
+            </p>
 
-                {/* Right Side: Two small cards */}
-                <div className="flex flex-col gap-5">
-                    {blogs.slice(1).map((item, index) => (
-                        <Link key={item.id} to={`/blogsView/${item.id}`}>
-                            <div
-                                className="flex flex-col sm:flex-row gap-4 rounded-xl p-2 sm:p-3 hover:shadow-lg transition-all duration-300"
-                                style={{
-                                    boxShadow: '0 0 10px rgba(191, 219, 254, 0.7)' // Tailwind's blue-100 in rgba
-                                }}
-                            >
-                                <img
-                                    src={item.img}
-                                    alt={item.title}
-                                    className="w-full sm:w-40 md:w-60 h-48 sm:h-auto rounded object-cover transform hover:translate-x-1 duration-700"
-                                />
-                                <div className="flex flex-col justify-center gap-2 sm:gap-3">
-                                    <button
-                                        className={`text-xs sm:text-sm text-white font-bold w-fit py-1 px-3 rounded ${
-                                            index === 0 ? 'bg-green-400' : 'bg-pink-400'
-                                        }`}
-                                    >
-                                        {item.category}
-                                    </button>
-                                    <h1 className="text-base md:text-lg font-bold line-clamp-2">
-                                        {item.title}
-                                    </h1>
-                                    <div className="flex flex-wrap items-center gap-3 text-xs sm:text-sm">
-                                        <div className="flex gap-2 items-center">
-                                            <img
-                                                src={item.authorImg}
-                                                alt={item.author}
-                                                className="w-6 h-6 rounded-full transition-transform duration-500 hover:scale-110"
-                                            />
-                                            <h2 className="font-semibold">{item.author}</h2>
-                                        </div>
-                                        <div className="flex items-center gap-2">
-                                            <CiCalendarDate className="text-lg" />
-                                            <span className="font-semibold">{item.date}</span>
-                                        </div>
-                                        <CiBookmark className="bg-gray-100 text-2xl p-1 ml-auto rounded-full" />
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
-                    ))}
-                </div>
+            <div className="flex flex-wrap items-center gap-4 text-sm mt-2">
+              <div className="flex gap-2 items-center">
+                <img
+                  src={blogs[0]?.authorImg}
+                  alt={blogs[0]?.author}
+                  loading="lazy"
+                  className="w-8 h-8 rounded-full border border-white/40"
+                />
+                <h2 className="font-semibold">{blogs[0]?.author}</h2>
+              </div>
+              <div className="flex items-center gap-1">
+                <CiCalendarDate className="text-lg" />
+                <span>{blogs[0]?.date}</span>
+              </div>
+              <div className="hidden md:flex items-center gap-1">
+                <FaRegComment className="text-lg" />
+                <span>{blogs[0]?.comments || 0} comments</span>
+              </div>
+              <CiBookmark className="ml-auto text-2xl hover:text-blue-400 transition" />
             </div>
+          </div>
+        </Link>
+
+        {/* ===== Right: Two Smaller Blogs ===== */}
+        <div className="flex flex-col gap-6 border-2 border-yellow-400 justify-between">
+          {blogs.slice(1).map((item, index) => (
+            <Link
+              key={item.id}
+              to={`/blogsView/${item.id}`}
+              className="flex flex-col sm:flex-row gap-4  rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-500"
+            >
+              <div className="relative flex-shrink-0">
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  loading="lazy"
+                  className="w-full md:w-48 lg:w-72 md:h-48 h-36 object-cover rounded-lg transform hover:scale-105 duration-700"
+                />
+                <span
+                  className={`absolute top-2 left-2 text-[11px] font-semibold px-2 py-1 rounded-md text-white ${
+                    index === 0 ? "bg-green-500/90" : "bg-pink-500/90"
+                  }`}
+                >
+                  {item.category}
+                </span>
+              </div>
+
+              <div className="flex flex-col justify-between gap-2 sm:gap-3">
+                <h2 className="text-base md:text-lg font-semibold text-gray-800 hover:text-blue-600 line-clamp-2 transition">
+                  {item.title}
+                </h2>
+
+                <div className="flex flex-wrap items-center gap-3 text-xs sm:text-sm text-gray-600">
+                  <div className="flex gap-2 items-center">
+                    <img
+                      src={item.authorImg}
+                      alt={item.author}
+                      loading="lazy"
+                      className="w-6 h-6 rounded-full"
+                    />
+                    <span className="font-medium">{item.author}</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <CiCalendarDate />
+                    <span>{item.date}</span>
+                  </div>
+                  <CiBookmark className="ml-auto text-xl hover:text-blue-500 transition" />
+                </div>
+              </div>
+            </Link>
+          ))}
         </div>
-    );
+      </div>
+    </section>
+  );
 };
 
 export default BlogContent;
