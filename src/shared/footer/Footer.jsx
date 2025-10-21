@@ -43,7 +43,7 @@ const Footer = () => {
             </li>
             <li>
               <NavLink
-                to="/lifeStyle"
+                to="/lifestyle"
                 className="hover:text-blue-400 transition-colors duration-300"
               >
                 Lifestyle
@@ -62,7 +62,7 @@ const Footer = () => {
                 to="/bookmarks"
                 className="hover:text-blue-400 transition-colors duration-300"
               >
-                Bookmark
+                Bookmarks
               </NavLink>
             </li>
           </ul>
@@ -73,24 +73,24 @@ const Footer = () => {
           <h2 className="text-xl font-semibold mb-4 text-white">Categories</h2>
           <ul className="space-y-3 text-sm">
             <li>
-              <a href="#" className="hover:text-blue-400 transition">
+              <NavLink to="/category/web-development" className="hover:text-blue-400 transition">
                 Web Development
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-400 transition">
+              <NavLink to="/category/technology" className="hover:text-blue-400 transition">
                 Technology
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-400 transition">
+              <NavLink to="/category/tutorials" className="hover:text-blue-400 transition">
                 Tutorials
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-400 transition">
+              <NavLink to="/category/inspiration" className="hover:text-blue-400 transition">
                 Inspiration
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>
@@ -127,28 +127,36 @@ const Footer = () => {
           </p>
           <div className="flex space-x-5 text-white text-lg">
             <a
-              href="#"
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Facebook"
               className="hover:text-blue-500 transition-all duration-300"
             >
               <FaFacebookF />
             </a>
             <a
-              href="#"
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Twitter"
               className="hover:text-sky-400 transition-all duration-300"
             >
               <FaTwitter />
             </a>
             <a
-              href="#"
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Instagram"
               className="hover:text-pink-500 transition-all duration-300"
             >
               <FaInstagram />
             </a>
             <a
-              href="#"
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="LinkedIn"
               className="hover:text-blue-400 transition-all duration-300"
             >
