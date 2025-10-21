@@ -8,21 +8,19 @@ import { GiHamburgerMenu } from "react-icons/gi";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isFixed, setIsFixed] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > lastScrollY && window.scrollY > 100) {
+      if (window.scrollY > 100) {
         setIsFixed(true);
-      } else if (window.scrollY < lastScrollY) {
+      } else {
         setIsFixed(false);
       }
-      setLastScrollY(window.scrollY);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  }, []);
 
   return (
     <div
