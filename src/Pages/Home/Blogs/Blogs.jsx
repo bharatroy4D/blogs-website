@@ -3,6 +3,7 @@ import { CiBookmark, CiCalendarDate } from 'react-icons/ci';
 import { Link } from 'react-router-dom';
 import { IoArrowForwardCircleOutline } from 'react-icons/io5';
 import useFetch from '../../../hooks/useFetch';
+import SectionTitle from '../../../Components/SectionTitle/SectionTitle';
 
 const Blogs = () => {
   const { data, loading, error } = useFetch({ url: "blogs.json" });
@@ -28,15 +29,10 @@ const Blogs = () => {
   return (
     <div className="max-w-7xl mx-auto px-5 lg:px-10 py-12">
       {/* Header */}
-      <div className="flex items-center justify-between mb-8">
-        <h2 className="text-2xl lg:text-3xl font-extrabold text-gray-800 tracking-tight">
-          Latest Blogs
-        </h2>
-        <IoArrowForwardCircleOutline className="text-3xl text-blue-600 cursor-pointer hover:text-blue-800 transition hidden lg:block" />
-      </div>
+      <SectionTitle title={'Latest Blogs'} />
 
       {/* Blog Grid */}
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 mt-6">
         {data.slice(0, 4).map((blog, index) => (
           <Link
             key={blog.id}
