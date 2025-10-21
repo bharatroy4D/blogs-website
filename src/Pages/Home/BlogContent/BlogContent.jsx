@@ -6,7 +6,7 @@ import useFetch from "../../../hooks/useFetch";
 
 const BlogContent = () => {
   const { data, error } = useFetch({ url: "blogs.json" });
-  const blogs = data?.slice(10, 13); // show 3 blogs
+  const blogs = data?.slice(10, 13);
 
   if (error)
     return <p className="text-center py-10 text-red-500">{error}</p>;
@@ -17,7 +17,7 @@ const BlogContent = () => {
     <section className="max-w-7xl mx-auto px-5 lg:px-10 my-10">
       <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8">
 
-        {/* ===== Left: Large Highlight Blog ===== */}
+        {/*Left: Large Highlight Blog  */}
         <Link
           to={`/blogsView/${blogs[0]?.id}`}
           className="relative group rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500"
@@ -67,7 +67,7 @@ const BlogContent = () => {
           </div>
         </Link>
 
-        {/* ===== Right: Two Smaller Blogs ===== */}
+        {/* Right: Two Smaller Blogs*/}
         <div className="flex flex-col gap-6 justify-between">
           {blogs.slice(1).map((item, index) => (
             <Link
