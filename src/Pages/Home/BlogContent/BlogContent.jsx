@@ -4,6 +4,9 @@ import { FaRegComment } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import useFetch from "../../../hooks/useFetch";
 import man from '../../../assets/man.jpeg'
+import girl from '../../../assets/girlStyle.avif'
+import tourism from '../../../assets/tourism.jpg'
+
 import blogImg from '../../../assets/front-view-photographer-with-camera_1257223-84498.avif'
 
 const BlogContent = () => {
@@ -79,15 +82,14 @@ const BlogContent = () => {
             >
               <div className="relative flex-shrink-0">
                 <img
-                  src={item.img}
+                  src={index === 0 ? tourism : girl}
                   alt={item.title}
                   loading="lazy"
                   className="w-full md:w-48 lg:w-72 md:h-48 h-36 object-cover rounded-lg transform hover:scale-105 duration-700"
                 />
                 <span
-                  className={`absolute top-2 left-2 text-[11px] font-semibold px-2 py-1 rounded-md text-white ${
-                    index === 0 ? "bg-green-500/90" : "bg-pink-500/90"
-                  }`}
+                  className={`absolute top-2 left-2 text-[11px] font-semibold px-2 py-1 rounded-md text-white ${index === 0 ? "bg-green-500/90" : "bg-pink-500/90"
+                    }`}
                 >
                   {item.category}
                 </span>
