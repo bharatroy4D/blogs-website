@@ -3,6 +3,8 @@ import { CiBookmark, CiCalendarDate } from "react-icons/ci";
 import { FaRegComment } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import useFetch from "../../../hooks/useFetch";
+import man from '../../../assets/man.jpeg'
+import blogImg from '../../../assets/front-view-photographer-with-camera_1257223-84498.avif'
 
 const BlogContent = () => {
   const { data, error } = useFetch({ url: "blogs.json" });
@@ -23,7 +25,7 @@ const BlogContent = () => {
           className="relative group rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500"
         >
           <img
-            src={blogs[0]?.img}
+            src={blogImg}
             alt={blogs[0]?.title}
             loading="lazy"
             className="w-full h-[360px] sm:h-[420px] object-cover group-hover:scale-105 duration-700"
@@ -47,7 +49,7 @@ const BlogContent = () => {
             <div className="flex flex-wrap items-center gap-4 text-sm mt-2">
               <div className="flex gap-2 items-center">
                 <img
-                  src={blogs[0]?.authorImg}
+                  src={man}
                   alt={blogs[0]?.author}
                   loading="lazy"
                   className="w-8 h-8 rounded-full border border-white/40"
@@ -99,7 +101,7 @@ const BlogContent = () => {
                 <div className="flex flex-wrap items-center gap-3 text-xs sm:text-sm text-gray-600">
                   <div className="flex gap-2 items-center">
                     <img
-                      src={item.authorImg}
+                      src={man}
                       alt={item.author}
                       loading="lazy"
                       className="w-6 h-6 rounded-full"
